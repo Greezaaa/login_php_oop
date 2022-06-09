@@ -19,5 +19,5 @@ if (isset($_POST['signup'])) {
     $signup->signupUser();
 
     //action
-    header("Location: ../index.php?error=none");
+    header("Location: ../index.php");
 }

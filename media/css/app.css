@@ -192,7 +192,7 @@ template {
   overflow: hidden;
   width: 35rem;
   height: 50rem;
-  margin-top: 5rem;
+  margin-top: 10rem;
   margin-inline: auto;
   perspective: 500px;
 }
@@ -225,6 +225,38 @@ template {
 .login-signup #signup,
 .login-signup #login {
   cursor: pointer;
+}
+
+.user-info {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.user-info .username {
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  color: #c7ba5f;
+  width: 3.5rem;
+  aspect-ratio: 1 / 1;
+  padding: 0.25rem;
+  outline: 0.75rem solid #c7ba5f;
+  display: inline-block;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+
+.user-info a {
+  text-decoration: none;
+  color: #333;
 }
 
 .alert {
@@ -277,6 +309,11 @@ form .input-group ::placeholder {
   color: rgba(255, 255, 255, 0);
 }
 
+form .input-group ::selection {
+  background-color: #c7ba5f;
+  color: #f2f2f2;
+}
+
 form .input-group input,
 form .input-group textarea,
 form .input-group select {
@@ -289,7 +326,6 @@ form .input-group select {
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0);
   box-shadow: 0 10px 20px rgba(206, 216, 181, 0.8), 0 10px 20px rgba(206, 216, 181, 0.3);
-  filter: hue-rotate(45deg);
   appearance: none;
   transition: all 200ms ease;
 }

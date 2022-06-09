@@ -15,7 +15,7 @@ include "inc/autoloader.inc.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>17OOPPHP - MVC Model</title>
+    <title>Login PHP OOP app</title>
     <link rel="stylesheet" href="./media/css/app.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./media/js/app.js" defer></script>
@@ -23,19 +23,18 @@ include "inc/autoloader.inc.php";
 
 <body>
     <main>
-        <section>
-            <?php
+        <?php
 
 
 
-            if (isset($_SESSION["userid"])) {
-                echo $_SESSION['username'] . "<br/><a href='inc/logout.inc.php'>Logout</a>";
-            } else {
-                echo "<a href='inc/login.inc.php'>Login</a>";
-            }
+        if (isset($_SESSION["userid"])) {
+            echo "<div class='user-info'><div class='username' >" . $_SESSION['username']['0'] . "</div><a href='inc/logout.inc.php'>Logout</a></div>";
+        } else {
+            echo "<div class='user-info'><a href='inc/login.inc.php'>Login</a></div>";
+        }
 
-            ?>
-        </section>
+        ?>
+
         <section class="login-signup">
             <div class="signUp">
 

@@ -22,38 +22,40 @@ class SignupController extends Signup
             //empty inputs
             session_start();
             $_SESSION['msg'] = "Empty inputs";
-            header("Location: ../index.php?error=emptyInputs");
+            header("Location: ../index.php");
             exit();
         }
         if ($this->invalidInput() == false) {
             //invalid inputs
             session_start();
             $_SESSION['msg'] = "invalid inputs";
-            header("Location: ../index.php?error=invalidUsername");
+            header("Location: ../index.php");
             exit();
         }
         if ($this->invalidEmail() == false) {
             //invalid email
             session_start();
             $_SESSION['msg'] = "invalid email";
-            header("Location: ../index.php?error=invalidEmail");
+            header("Location: ../index.php");
             exit();
         }
         if ($this->pwdMatch() == false) {
             //password dont match
             session_start();
             $_SESSION['msg'] = "Passwords do not match";
-            header("Location: ../index.php?error=passwordDontMatch");
+            header("Location: ../index.php");
             exit();
         }
         if ($this->checkUserE() == false) {
             //username or email allready  taken
             session_start();
             $_SESSION['msg'] = "User or email already taken";
-            header("Location: ../index.php?error=UsernameOrEmailTaken");
+            header("Location: ../index.php");
             exit();
         }
         $this->setUser($this->username, $this->password, $this->email);
+        session_start();
+        $_SESSION['msg'] = "User registered successfully";
     }
 
     private function emptyInput()

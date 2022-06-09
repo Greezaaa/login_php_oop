@@ -11,7 +11,7 @@ class Signup extends Dbh
             $stmt = null;
             session_start();
             $_SESSION['msg'] = "stmt error";
-            header('location: ../index.php?error=CantAddUser');
+            header('location: ../index.php');
             exit();
         }
         $stmt = null;
@@ -27,7 +27,7 @@ class Signup extends Dbh
             // $stmt->close(); //revisar si funciona despues
             session_start();
             $_SESSION['msg'] = "stmt error";
-            header("Location: ../index.php?error=STMT_no_va");
+            header("Location: ../index.php");
             exit();
         }
 

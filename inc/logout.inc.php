@@ -2,4 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: ../index.php?error=Agur");
+session_start();
+$_SESSION['msg'] = "User session has been destroyed.";
+header("Location: ../index.php");

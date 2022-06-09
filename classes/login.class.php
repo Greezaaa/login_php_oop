@@ -11,7 +11,7 @@ class Login extends Dbh
             $stmt = null;
             session_start();
             $_SESSION['msg'] = "stmt Error";
-            header("location: ../index.php?error=stmtfailed");
+            header("location: ../index.php");
             exit();
         }
 
@@ -19,7 +19,7 @@ class Login extends Dbh
             $stmt = null;
             session_start();
             $_SESSION['msg'] = "User not founded";
-            header("location: ../index.php?error=usernotfound");
+            header("location: ../index.php");
             exit();
         }
 
@@ -30,7 +30,7 @@ class Login extends Dbh
             $stmt = null;
             session_start();
             $_SESSION['msg'] = "Wrong password";
-            header("location: ../index.php?error=wrongpassword");
+            header("location: ../index.php");
             exit();
         } elseif ($checkPwd == true) {
             $stmt = $this->conn()->prepare('SELECT * FROM loginusers WHERE (username = ? OR email = ?) AND password = ?;');
@@ -39,7 +39,7 @@ class Login extends Dbh
                 $stmt = null;
                 session_start();
                 $_SESSION['msg'] = "stmt Error";
-                header("location: ../index.php?error=stmtfailed");
+                header("location: ../index.php");
                 exit();
             }
 
@@ -47,7 +47,7 @@ class Login extends Dbh
                 $stmt = null;
                 session_start();
                 $_SESSION['msg'] = "username or email and password not match";
-                header("location: ../index.php?error=usernotfound");
+                header("location: ../index.php");
                 exit();
             }
 

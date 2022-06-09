@@ -5,7 +5,7 @@
   overflow: hidden;
   width: 35rem;
   height: 50rem;
-  margin-top: 5rem;
+  margin-top: 10rem;
   margin-inline: auto;
   perspective: 500px;
   .signUp,
@@ -38,7 +38,35 @@
     cursor: pointer;
   }
 }
-
+.user-info {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  .username {
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+    background-color: $--clr-white06;
+    border-radius: 50%;
+    color: #c7ba5f;
+    width: 3.5rem;
+    aspect-ratio: 1 / 1;
+    padding: 0.25rem;
+    outline: 0.75rem solid rgba(#c7ba5f, 1);
+    display: inline-block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 3rem;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+}
 .alert {
   display: block;
   position: absolute;

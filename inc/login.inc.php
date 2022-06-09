@@ -17,10 +17,8 @@ if (isset($_POST['login'])) {
 
     //action
 
-    header("Location: ../index.php?error=none");
+    header("Location: ../index.php");
 } else {
     //action
-    session_start();
-    $_SESSION['msg'] = "access not granded";
-    header("Location: ../index.php?error=loginFirst");
+    header("Location: ../index.php");
 }

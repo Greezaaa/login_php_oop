@@ -62,18 +62,6 @@ body {
   min-height: 100%;
 }
 
-// section {
-//   position: relative;
-//   margin: 5rem auto;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 5rem;
-
-//   @media (min-width: 650px) {
-//     flex-direction: row;
-//     gap: 1rem;
-//   }
-// }
 form {
   min-width: 30rem;
   .input-group {
@@ -84,6 +72,10 @@ form {
     padding: 0.5rem;
     ::placeholder {
       color: $--clr-transparent;
+    }
+    ::selection {
+      background-color: #c7ba5f;
+      color: #f2f2f2;
     }
     input,
     textarea,
@@ -98,7 +90,7 @@ form {
       padding: 1rem;
       background-color: $--clr-transparent;
       box-shadow: 0 10px 20px rgba(#ced8b5, 0.8), 0 10px 20px rgba(#ced8b5, 0.3);
-      filter: hue-rotate(45deg);
+
       appearance: none;
       transition: all 200ms ease;
 
