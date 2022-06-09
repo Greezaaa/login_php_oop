@@ -16,8 +16,11 @@ if (isset($_POST['login'])) {
     $login->loginUser();
 
     //action
+
     header("Location: ../index.php?error=none");
 } else {
     //action
+    session_start();
+    $_SESSION['msg'] = "access not granded";
     header("Location: ../index.php?error=loginFirst");
 }

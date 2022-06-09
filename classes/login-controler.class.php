@@ -16,6 +16,8 @@ class LoginController extends Login
     {
         if ($this->emptyInput() == false) {
             //empty inputs
+            session_start();
+            $_SESSION['msg'] = "Empty inputs";
             header("Location: ../index.php?error=emptyInputs");
             exit();
         }

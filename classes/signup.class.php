@@ -9,6 +9,8 @@ class Signup extends Dbh
 
         if (!$stmt->execute(array($username, $hashedPwd, $email))) {
             $stmt = null;
+            session_start();
+            $_SESSION['msg'] = "stmt error";
             header('location: ../index.php?error=CantAddUser');
             exit();
         }
@@ -23,6 +25,8 @@ class Signup extends Dbh
         if (!$stmt->execute(array($username, $email))) {
             $stmt = null;
             // $stmt->close(); //revisar si funciona despues
+            session_start();
+            $_SESSION['msg'] = "stmt error";
             header("Location: ../index.php?error=STMT_no_va");
             exit();
         }

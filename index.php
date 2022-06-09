@@ -88,26 +88,19 @@ include "inc/autoloader.inc.php";
             </div>
 
         </section>
+        <?php
+
+        if (isset($_SESSION['msg'])) {
+            echo '
+             <div class="alert" id="msg">
+                ' . $_SESSION["msg"] . '
+             </div>
+             ';
+            unset($_SESSION['msg']);;
+        }
+
+        ?>
     </main>
 </body>
 
 </html>
-
-<!-- <form action="" method="post">
-    <div class="input-group">
-        <select name="select" id="">
-            <option value="" default selected>Select an option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-            <option value="4">Option 4</option>
-        </select>
-        <label for="select">Select an option</label>
-        <span class="invalid-feedback">Mensaje a mostrar</span>
-    </div>
-    <div class="input-group">
-        <textarea rows="4" placeholder="Describe yourself here..."></textarea>
-        <label for="description">Describe the content</label>
-        <span class="invalid-feedback">Mensaje a mostrar</span>
-    </div>
-</form> -->

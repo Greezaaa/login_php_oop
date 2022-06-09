@@ -227,6 +227,17 @@ template {
   cursor: pointer;
 }
 
+.alert {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
 *,
 *:before,
 *::after {

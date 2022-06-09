@@ -12,3 +12,11 @@ jQuery(function ($) {
 
     });
 });
+
+
+//fade msg alert
+
+//autohide msg-alert
+setTimeout(function () {
+    $('#msg').fadeOut('slow');
+}, 5000);
