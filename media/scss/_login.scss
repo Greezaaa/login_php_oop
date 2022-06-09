@@ -1,0 +1,40 @@
+.login-signup {
+  max-width: 35rem;
+
+  position: relative;
+  overflow: hidden;
+  width: 35rem;
+  height: 50rem;
+  margin-top: 5rem;
+  margin-inline: auto;
+  perspective: 500px;
+  .signUp,
+  .logIn {
+    position: absolute;
+    top: 0;
+
+    transform-origin: top center;
+    transition: transform 400ms ease-in-out;
+    padding: 2rem 0.5rem;
+  }
+  .logIn {
+    transform: rotateX(180deg);
+    transform-origin: top;
+  }
+
+  .signUp {
+    transform: rotateX(-180deg);
+    transform-origin: top;
+  }
+
+  .logIn.active,
+  .signUp.active {
+    transform: rotateX(0deg);
+    transition: transform 400ms ease-in-out;
+  }
+
+  #signup,
+  #login {
+    cursor: pointer;
+  }
+}
