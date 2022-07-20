@@ -194,7 +194,7 @@ template {
   height: 50rem;
   margin-top: 10rem;
   margin-inline: auto;
-  perspective: 500px;
+  perspective: 1000px;
 }
 
 .login-signup .signUp,
@@ -202,7 +202,7 @@ template {
   position: absolute;
   top: 0;
   transform-origin: top center;
-  transition: transform 400ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
   padding: 2rem 0.5rem;
 }
 
@@ -219,7 +219,7 @@ template {
 .login-signup .logIn.active,
 .login-signup .signUp.active {
   transform: rotateX(0deg);
-  transition: transform 400ms ease-in-out;
+  transition: transform 1000ms ease-in-out;
 }
 
 .login-signup #signup,

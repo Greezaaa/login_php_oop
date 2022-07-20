@@ -18,7 +18,7 @@ class Login extends Dbh
         if ($stmt->rowCount() == 0) {
             $stmt = null;
             session_start();
-            $_SESSION['msg'] = "User not founded";
+            $_SESSION['msg'] = "User not found";
             header("location: ../index.php");
             exit();
         }
@@ -54,7 +54,7 @@ class Login extends Dbh
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             session_start();
-            $_SESSION['msg'] = "Welcome a board " . ucfirst($user[0]["username"]);
+            $_SESSION['msg'] = "Welcome aboard " . ucfirst($user[0]["username"]);
             $_SESSION["userid"] = $user[0]["id"];
             $_SESSION["username"] = $user[0]["username"];
 

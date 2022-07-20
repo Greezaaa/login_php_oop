@@ -4,7 +4,7 @@ class Dbh
     private $host = "localhost";
     private $user = "root";
     private $pwd = "";
-    private $dbName = "learn_oop";
+    private $dbName = "login";
 
 
     protected function conn()

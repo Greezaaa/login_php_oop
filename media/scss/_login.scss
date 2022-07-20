@@ -7,14 +7,14 @@
   height: 50rem;
   margin-top: 10rem;
   margin-inline: auto;
-  perspective: 500px;
+  perspective: 1000px;
   .signUp,
   .logIn {
     position: absolute;
     top: 0;
 
     transform-origin: top center;
-    transition: transform 400ms ease-in-out;
+    transition: transform 1000ms ease-in-out;
     padding: 2rem 0.5rem;
   }
   .logIn {
@@ -30,7 +30,7 @@
   .logIn.active,
   .signUp.active {
     transform: rotateX(0deg);
-    transition: transform 400ms ease-in-out;
+    transition: transform 1000ms ease-in-out;
   }
 
   #signup,
